@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1-Intren</title>
+    <style>
+        body{
+            background-color:#303030;
+        }
+        .header{
+            display:flex;
+            max-height: var(device-width);
+            height: 2em;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1em;
+            padding-left: 0.6em;
+        }
+        .text1{
+            display: flex;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: antiquewhite;
+            padding: 0.4em;
+            font-size: 1.4em;
+            margin-left: 1.2em;
+            margin-top: 1em;
+        }
+        .main.header.text1 :hover{
+            color: aquamarine;
+            cursor: pointer;
+        }
+        .Heading_main{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.7em;
+            margin-left: 2em;
+            display: flex;
+            margin-top:0.4em;
+            align-items: center;
+            color: aliceblue;
+        }
+        .T_right_Box h2{
+             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .Search_tab{
+            display: flex;
+            margin-top: 0.7em;
+            padding-right: 0em;
+            width: 15em;
+            height: 2.6em;
+            background-color: rgba(202, 202, 202, 0.46);
+            border-radius: 5em / 5em;
+            margin-left: 2em;
+        }
+        .Search_text{
+            display: flex;
+            color:aliceblue;
+            font-size: 1.5em;
+            margin-left: 2.3em;
+            padding-bottom: 1em;
+            padding-top: 0.3em;
+        }
+        .Search_image,.logo{
+            display: flex;
+            height: 20%;
+            width: 20%;
+            height:1.9em;
+            width: 1.5em;
+            padding-top: 0.35em;
+            padding-left: 0.5em;
+            filter: contrast(200%);
+        }
+        .logo{
+            margin-right:1.8em;
+        }
+        .favarites{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: flex;
+            width: 2em;
+            height: 2em;
+        }
+        .logo :hover{
+            filter: brightness(480) contrast(400) opacity(75);
+            cursor: pointer;
+        }
+        .con{
+            width:15em;
+            height: 10em;
+            padding-left: 4.2em;
+            padding-top: 1.5em;
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+        .con b{
+
+        }
+        .group1 img{
+            margin-left: 1.8em;
+            padding:0.2em;
+            width: 6.5em;
+            height: 5em;
+        }
+        .group1 img:hover{
+            filter: brightness(200) contrast(300) opacity(75);
+            cursor: pointer;
+        }
+        .group2 img{
+            margin-left: 2.4em;
+            height: 4em;
+            width: 4.5em;
+        }
+        .group2 img:hover{
+            filter: brightness(500) contrast(0) opacity(75);
+            cursor: pointer;
+        }
+        .group3 img{
+            margin-left: 0.8em;
+            height:  3.9em;
+            width: 4.5em;
+        }
+        .group3 img:hover{
+            filter: brightness(200) contrast(300) opacity(75);
+            cursor: pointer;
+        }
+        .group4 img{
+            margin-left: 0.7em;
+            height:  3.8em;
+            width: 3.8em;
+        }
+        .group4 img:hover{
+            filter: brightness(200) contrast(300) opacity(75);
+            cursor: pointer;
+        }
+        .group5 img{
+            margin-left: 2.5em;
+            height:  3.8em;
+            width: 3.8em;
+        }
+        .group5 img:hover{
+            filter: brightness(200) contrast(300) opacity(75);
+            cursor: pointer;
+        }
+        .Cart{
+            display: flex;
+            width: 2em;
+            height: 2em;
+        }
+        .T_right_Box{
+            background-color: rgba(137, 87, 87, 0.83);
+            width: 37%;
+            border-radius: 1.5em/1.5em;
+            margin-left: 5%;
+            margin-top: 2.5em;
+            padding-left: 2.7em;
+            padding-top:2em ;
+            padding-bottom: 2em;
+            color: #fff;
+            font-size: 1.4em;
+        }
+        .T_left_Box{
+            width: 41%;
+            border-radius: 1.5em/1.5em;
+            background-color: rgba(150, 150, 150, 1);
+            margin-left: 5em;
+            margin-top: 2.5em;
+            padding-bottom: 2em;
+            color: #303030;
+            font-size: 1.4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Box_f{
+            display: flex;
+        }
+        .Box_s{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(150, 150, 150, 1);
+            border-radius: 1em/1.5em;
+            margin-top: 4em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+        }
+        .Main_Button{
+            display: flex;
+        }
+        .BUY_NOW{
+            background-color: rgba(255, 118, 118, 1);
+            border-radius: 0.5em/0.7em;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.3em;
+            padding-left: 0.8em;
+            padding-right: 0.8em;
+        }
+        .ADD_TO_CART{
+            background-color: rgba(255, 107, 0, 1);
+            border-radius: 0.5em/0.7em;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.3em;
+            padding-left: 0.8em;
+            padding-right: 0.8em;
+            margin-left: 1.2em;
+        }
+        .Sec_More_Details{
+            background-color: rgba(137, 87, 87, 0.83);
+            border-radius: 1.5em/1.5em;
+            padding:1.5em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            padding-left: 3.5em;
+            padding-bottom: 2.5em;
+            color: #fff;
+            margin-top: 4em;
+        }
+        .Sec_HIGH_LIGHTS{
+            background-color: rgba(137, 87, 87, 0.83);
+            border-radius: 1.5em/1.5em;
+            padding:1.5em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            padding-left: 3.5em;
+            color: #fff;
+            margin-top: 4em;
+        }
+        .HIGH_LIGHTS_IMGs{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5em;
+            padding-bottom: 2.5em;
+        }
+        .rev{
+            background-color: rgba(150, 150, 150, 1);
+            padding: 5em;
+            border-radius: 0.7em/0.7em;
+            color: #303030;
+        }
+        .RR2{
+            display: flex;
+            justify-content:space-between;
+        }
+        .Sec_Contact{
+            background-color: rgba(150, 150, 150, 1);
+            border-radius: 1em/1.5em;
+            padding: 4em;
+            margin: 2em;
+            margin-top: 4em;
+        }
+        .Sec_Contact h2{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+            .header, .Heading_main,.Search_tab {
+                padding: 5px;
+            }
+            .main {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="text1">Home</div>
+            <div class="text1">Products</div>
+            <div class="text1">Contacts</div>
+            <div class="Heading_main">COMPANY NAME</div>
+            <div class="Search_tab">
+                <div class="Search_image">
+                    <img src="C:\Users\karip\Downloads\170773057533460829.png" alt=""></div>
+                <div class="Search_text">Search</div>
+            </div>
+            <div class="favarites logo">
+                <img src="C:\Users\karip\OneDrive\Desktop\intren\images\FAV_ICON(1).png" alt="">
+            </div>
+            <div class="Cart logo">
+                <img src="C:\Users\karip\OneDrive\Desktop\intren\images\Cart_Logo.png" alt=""></div>
+        </div>    
+        <div class="Box_f">
+            <div class="T_right_Box">
+                <h2>Product Name:</h2>
+                <h3>Product description.....................<br>
+                ........................<br>
+                Details & Features:.........................<br>
+                ............       ............<br>
+                ............       ............</h3>
+                <div class="Main_Button">
+                    <div class="BUY_NOW Butt"><B>BUY NOW</B></div>
+                    <div class="ADD_TO_CART"><h4>ADD TO CART</h4></div>
+                </div>
+                <h4>Start your day with our products which<br>
+                     make your life comfortable and easier. </h4>
+            </div>
+            <div class="T_left_Box">
+                <h1>Product Images</h1>
+            </div>
+        </div>
+        <div class="Box_s">
+            <div class="group1 con"><img src="C:\Users\karip\OneDrive\Desktop\intren\images\Removal-213.png" alt="">
+                    <br><B style="padding-top: 2em;">Free Shipping & Returns</B>
+                </div>
+            <div class="group2 con"><img src="C:\Users\karip\OneDrive\Desktop\intren\images\MONEY_BACK_ICON.png" alt="">
+                <h5>100% Money Back Guarantee</h5></div>
+            <div class="group3 con"><img src="C:\Users\karip\OneDrive\Desktop\intren\images\HIGH_QUA_ICON.png" alt="">
+                <h5> Quality Material</h5></div>
+            <div class="group4 con"><img src="C:\Users\karip\OneDrive\Desktop\intren\images\Safe_Sec_icon.png" alt="">
+                <h5>Safe and Secure</h5></div>
+            <div class="group5 con"><img src="C:\Users\karip\OneDrive\Desktop\intren\images\Cash_on_dev_icon.png" alt="">
+                <h5>Cash on Delivery Avaliable</h5></div>
+        </div>
+        <div class="Sec_More_Details">
+            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: antiquewhite;">
+                More Details:</h2>
+                <h3>
+                    Here we provide more details/specifictaions about our product.....................<br>
+                    ...............................................<br>
+                    ........................                      ........................             ........................<br>      
+                    ........................                      ........................             ........................<br>
+                </h3>
+        </div>
+        <div class="Sec_HIGH_LIGHTS">
+            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: antiquewhite;">
+                High Lights:</h2>
+                <div class="HIGH_LIGHTS_IMGs">
+                    <div class="rev">
+                        <h4>IMAGES/Videos</h4>
+                    </div>
+                    <div class="rev">
+                        <h4>IMAGES/Videos</h4>
+                    </div>
+                    <div class="rev">
+                        <h4>IMAGES/Videos</h4>
+                    </div>
+                    <div class="rev">
+                        <h4>IMAGES/Videos</h4>
+                    </div>
+
+                </div>
+        </div>
+        <div class="Sec_Contact">
+            <h2>Contact us:</h2>
+            <h4>For further more details contact us Email:<u>IndianCompa0ny@gmail.com</u></h4>
+        </div>
+    </div>
+</body>
+</html>
